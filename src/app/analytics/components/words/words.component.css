@@ -1,0 +1,23 @@
+.topHeading {
+  width: 80%;
+  left: 10%;
+  position: relative;
+}
+
+.graphStyle {
+  height: 75%;
+  background-color: white;
+  opacity: 0.8;
+}
+
+.pageStyle {
+  height: 80%;
+  background-color: white;
+
+  opacity: 0.8;
+}
+
+.loading {
+  color: white;
+  padding-top: 50px;
+}

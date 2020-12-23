@@ -1,0 +1,52 @@
+<div nz-row class="container">
+  <div nz-col nzSpan="12">
+    <div class="welcome">
+      WELCOME TO ORNICO FUSION <br />
+      <br />
+      Ornico Fusion is your media data and analytical web platform helping you make sound strategic marketing decisions.
+      Breaking down the marketing silos, Ornico Fusion provides relevant editorial, advertising and social media data
+      and analysis, across a multitude of mediums. <br />
+      <br />
+      Now you can easily navigate the media clutter with fully interactive dashboards to identify competitor trends,
+      brand performance, share of voice, media spend and much more! Get the know how to grow your brand now.
+      <br /><br />
+      Join the Ornico Fusion community!
+    </div>
+  </div>
+  <div nz-col nzSpan="10">
+    <div class="login-section">
+      <div class="title">
+        <div class="product">ORNICO<br />FUSION</div>
+        <br />
+      </div>
+      <div class="login-text">LOGIN</div>
+      <div class="login-form">
+        <form nz-form [formGroup]="loginForm" class="login-form" (ngSubmit)="onSubmit()">
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Username is required">
+              <nz-input-group>
+                <input type="text" nz-input formControlName="username" placeholder="USER NAME" name="username"
+                  [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control nzErrorTip="Password is required">
+              <nz-input-group>
+                <input type="password" nz-input formControlName="password" placeholder="PASSWORD" name="password"
+                  [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+              </nz-input-group>
+            </nz-form-control>
+          </nz-form-item>
+          <button nz-button class="login-form-button login-form-margin" [nzType]="'primary'">LOGIN</button>
+          <div class="example-error inactive">
+            <span class="message"></span>
+          </div>
+        </form>
+      </div>
+      <div class="logo">
+        <img height="60px" src="../../../assets/ornico-logo.png" />
+      </div>
+    </div>
+  </div>
+</div>

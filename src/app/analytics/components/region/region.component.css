@@ -1,0 +1,23 @@
+.topHeading {
+  width: 80%;
+  left: 10%;
+  position: relative;
+}
+
+.graphStyle {
+  height: 75%;
+  background-color: white;
+  opacity: 0.8;
+}
+
+.mapStyle {
+  height: 500px;
+  min-width: 310px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.loading {
+  color: white;
+  padding-top: 50px;
+}

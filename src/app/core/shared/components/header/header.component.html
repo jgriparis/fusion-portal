@@ -1,0 +1,63 @@
+<div class="heading">{{ reportName }} : {{ dateFrom }} - {{ dateTo }}</div>
+<form nz-form [nzLayout]="'vertical'">
+  <div nz-row [nzGutter]="24">
+    <div nz-col class="gutter-row" [nzSpan]="11">
+      <nz-form-item>
+        <nz-form-control [nzSpan]="24">
+          <nz-radio-group [(ngModel)]="radioValue" (ngModelChange)="onChangeRadio()" name="options">
+            <label nz-radio nzValue="LocationMap" [hidden]="!lm">Location Map</label>
+            <label nz-radio nzValue="ItemCount" [hidden]="!ic">Item Count</label>
+            <label nz-radio nzValue="ItemShare" [hidden]="!is">Item Share</label>
+
+            <label nz-radio nzValue="CountPerDay" [hidden]="!cpd">Count Per Day</label>
+            <label nz-radio nzValue="CountPerWeek" [hidden]="!cpw">Count Per Week</label>
+            <label nz-radio nzValue="CountPerMonth" [hidden]="!cpm">Count Per Month</label>
+          </nz-radio-group>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="5">
+      <nz-form-item>
+        <nz-form-control [nzSpan]="24">
+          <nz-date-picker
+            name="dtFrom"
+            [(ngModel)]="defaultFrom"
+            (ngModelChange)="onChangeFrom($event)"
+            [nzAllowClear]="false"
+          ></nz-date-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="5">
+      <nz-form-item>
+        <nz-form-control [nzSpan]="24">
+          <nz-date-picker
+            name="dtTo"
+            [(ngModel)]="defaultTo"
+            (ngModelChange)="onChangeTo($event)"
+            [nzAllowClear]="false"
+          ></nz-date-picker>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-control [nzSpan]="24">
+          <button nz-button nzType="primary" (click)="showModalTop()">Report Filters</button>
+          <nz-modal
+            [nzStyle]="{
+              top: '105px',
+              width: '90%'
+            }"
+            [(nzVisible)]="isVisibleTop"
+            (nzOnCancel)="handleCancelTop()"
+            (nzOnOk)="handleOkTop()"
+            [nzFooter]="null"
+          >
+            <app-filter></app-filter>
+          </nz-modal>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+</form>

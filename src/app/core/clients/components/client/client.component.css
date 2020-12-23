@@ -1,0 +1,35 @@
+.smallcheckboxes {
+  position: absolute;
+  top: 10px;
+  z-index: 99;
+}
+.smallcheckboxes label {
+  display: inline-block;
+  padding-right: 50px;
+  white-space: nowrap;
+}
+
+.smallcheckboxes input {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.smallcheckboxes label span {
+  vertical-align: middle;
+}
+
+.gutter-row {
+  margin-bottom: 5px;
+}
+
+.headlabel {
+  font-weight: bold;
+}
+
+.logo {
+  position: absolute;
+}
+
+.error {
+  color: red;
+}

@@ -1,0 +1,60 @@
+.portaldashboard {
+  width: 100%;
+}
+
+.topLeft {
+  position: absolute;
+  top: 2%;
+  margin-top: 3%;
+  width: 40%;
+  left: 100px;
+  height: 50%;
+}
+
+.topRight {
+  position: absolute;
+  margin-top: 3%;
+  top: 2%;
+  width: 40%;
+  left: 52%;
+  height: 50%;
+}
+
+.bottomLeft {
+  position: absolute;
+  margin-top: 3%;
+  top: 45%;
+  width: 40%;
+  left: 100px;
+  height: 50%;
+}
+
+.bottomRight {
+  position: absolute;
+  margin-top: 3%;
+  top: 45%;
+  width: 40%;
+  left: 52%;
+  height: 50%;
+}
+
+.dashButton {
+  position: absolute;
+  z-index: 9;
+}
+
+.ave {
+  position: absolute;
+  width: 16%;
+  height: 32%;
+  font-size: 90%;
+  text-align: center;
+  color: #fff;
+  text-align: center;
+  background: #000;
+  left: 40%;
+  top: 32%;
+  z-index: 9;
+  border-radius: 50%;
+  padding: 1%;
+}

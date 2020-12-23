@@ -1,0 +1,13 @@
+<div>
+  <div echarts [options]="chartOption" class="graphStyle" (chartClick)="onChartClick($event)"></div>
+  <div>
+    <nz-modal
+      [nzStyle]="{ top: '15px', width: '90%' }"
+      [(nzVisible)]="isVisibleTop"
+      (nzOnCancel)="handleCancelTop()"
+      (nzOnOk)="handleOkTop()"
+    >
+      <app-datachart itemField="mediatype"></app-datachart>
+    </nz-modal>
+  </div>
+</div>

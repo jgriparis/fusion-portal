@@ -1,0 +1,246 @@
+<form nz-form [nzLayout]="'vertical'" [formGroup]="filterForm" (ngSubmit)="submitForm()">
+  <div nz-row [nzGutter]="24">
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="14" nzFor="tester">SEARCH</nz-form-label>
+        <nz-form-control [nzSpan]="24">
+          <nz-input-group nzSearch [nzAddOnAfter]="suffixIconButton">
+            <input
+              type="text"
+              nz-input
+              placeholder="input search text"
+              formControlName="txtSearch"
+              id="txtSearch"
+              style="background-color: lightgrey"
+            />
+          </nz-input-group>
+          <ng-template #suffixIconButton>
+            <button nz-button nzType="primary" nzSearch>
+              <i nz-icon nzType="search"></i>
+            </button>
+          </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="14" nzFor="tester2">MEDIA TYPE</nz-form-label>
+        <nz-form-control [nzSpan]="24">
+          <angular2-multiselect
+            [placeholder]="'Please select'"
+            [data]="listOfMediaType"
+            [settings]="dropdownSettings"
+            formControlName="drpMediaType"
+            id="drpMediaType"
+            [(ngModel)]="selectedItemsMediaType"
+          >
+          </angular2-multiselect>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="14" nzFor="tester2">BRAND</nz-form-label>
+        <nz-form-control [nzSpan]="24">
+          <angular2-multiselect
+            [placeholder]="'Please select'"
+            [data]="listOfBrand"
+            [(ngModel)]="selectedBrand"
+            [settings]="dropdownSettings"
+            formControlName="drpBrand"
+            id="drpBrand"
+            [(ngModel)]="selectedItemsBrand"
+          >
+          </angular2-multiselect>
+          <ng-template #tagPlaceHolder let-selectedList> and {{ selectedList.length }} more selected </ng-template>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="14" nzFor="tester">CATEGORY</nz-form-label>
+        <nz-form-control [nzSpan]="24">
+          <angular2-multiselect
+            [placeholder]="'Please select'"
+            [data]="listOfCategory"
+            [settings]="dropdownSettings"
+            formControlName="drpCategory"
+            id="drpCategory"
+            [(ngModel)]="selectedItemsCategory"
+          >
+          </angular2-multiselect>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="16" nzFor="tester2">SUB CATEGORY</nz-form-label>
+        <nz-form-control [nzSpan]="24">
+          <angular2-multiselect
+            [placeholder]="'Please select'"
+            [data]="listOfSubCategory"
+            [settings]="dropdownSettings"
+            formControlName="drpSubCategory"
+            id="drpSubCategory"
+            [(ngModel)]="selectedItemsSubCategory"
+          >
+          </angular2-multiselect>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="14" nzFor="tester">ADVERT TYPE</nz-form-label>
+        <nz-form-control [nzSpan]="24">
+          <angular2-multiselect
+            [placeholder]="'Please select'"
+            [data]="listOfAdvertType"
+            [settings]="dropdownSettings"
+            formControlName="drpAdvertType"
+            id="drpAdvertType"
+            [(ngModel)]="selectedItemsAdvertType"
+          >
+          </angular2-multiselect>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="14" nzFor="tester2">LANGUAGE</nz-form-label>
+        <nz-form-control [nzSpan]="24">
+          <angular2-multiselect
+            [placeholder]="'Please select'"
+            [data]="listOfLanguage"
+            [settings]="dropdownSettings"
+            formControlName="drpLanguage"
+            id="drpLanguage"
+            [(ngModel)]="selectedItemsLanguage"
+          >
+          </angular2-multiselect>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="14" nzFor="tester">LOCATION</nz-form-label>
+        <nz-form-control [nzSpan]="24">
+          <angular2-multiselect
+            [placeholder]="'Please select'"
+            [data]="listOfLocation"
+            [settings]="dropdownSettings"
+            formControlName="drpLocation"
+            id="drpLocation"
+            [(ngModel)]="selectedItemsLocation"
+          >
+          </angular2-multiselect>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+  <div nz-row [nzGutter]="24">
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="18" nzFor="tester">MEDIA SOURCE</nz-form-label>
+        <nz-form-control [nzSpan]="24">
+          <angular2-multiselect
+            [placeholder]="'Please select'"
+            [data]="listOfMediaSource"
+            [settings]="dropdownSettings"
+            formControlName="drpMediaSource"
+            id="drpMediaSource"
+            [(ngModel)]="selectedItemsSource"
+          >
+          </angular2-multiselect>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="14" nzFor="tester">TYPE</nz-form-label>
+        <nz-form-control [nzSpan]="24">
+          <angular2-multiselect
+            [placeholder]="'Please select'"
+            [data]="listOfType"
+            [settings]="dropdownSettings"
+            formControlName="drpType"
+            id="drpType"
+            [(ngModel)]="selectedItemsType"
+          >
+          </angular2-multiselect>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="14" nzFor="tester">SENTIMENT</nz-form-label>
+        <nz-form-control [nzSpan]="24">
+          <angular2-multiselect
+            [placeholder]="'Please select'"
+            [data]="listOfSentiment"
+            [settings]="dropdownSettings"
+            formControlName="drpSentiment"
+            id="drpSentiment"
+            [(ngModel)]="selectedItemsSentiment"
+          >
+          </angular2-multiselect>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="14" nzFor="tester">AUTHOR</nz-form-label>
+        <nz-form-control [nzSpan]="24">
+          <angular2-multiselect
+            [placeholder]="'Please select'"
+            [data]="listOfAuthor"
+            [settings]="dropdownSettings"
+            formControlName="drpAuthor"
+            id="drpAuthor"
+            [(ngModel)]="selectedItemsAuthor"
+          >
+          </angular2-multiselect>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="14" nzFor="tester">TOPIC</nz-form-label>
+        <nz-form-control [nzSpan]="24">
+          <angular2-multiselect
+            [placeholder]="'Please select'"
+            [data]="listOfTopic"
+            [settings]="dropdownSettings"
+            formControlName="drpTopic"
+            id="drpTopic"
+            [(ngModel)]="selectedItemsTopic"
+          >
+          </angular2-multiselect>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-label [nzSpan]="14" nzFor="tester">COUNTRY</nz-form-label>
+        <nz-form-control [nzSpan]="24">
+          <angular2-multiselect
+            [placeholder]="'Please select'"
+            [data]="listOfCountry"
+            [settings]="dropdownSettings"
+            formControlName="drpCountry"
+            id="drpCountry"
+            [(ngModel)]="selectedItemsCountry"
+          >
+          </angular2-multiselect>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+    <div nz-col class="gutter-row" [nzSpan]="3">
+      <nz-form-item>
+        <nz-form-control [nzXs]="{ span: 24, offset: 0 }" [nzSm]="{ span: 16, offset: 8 }">
+          <button nz-button nzType="primary" style="top: 70px">Apply</button>
+          <button nz-button style="top: 38px; left: 90px" (click)="resetForm()">Clear Filters</button>
+        </nz-form-control>
+      </nz-form-item>
+    </div>
+  </div>
+</form>

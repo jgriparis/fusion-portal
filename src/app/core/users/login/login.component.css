@@ -1,0 +1,95 @@
+.login-form {
+  max-width: 300px;
+}
+
+.login-section {
+  margin: 5% 15%;
+  align-content: center;
+}
+
+.container {
+  background-image: url(../../../../assets/portal_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.welcome {
+  display: block;
+  font-size: x-large;
+  font-family: 'Trebuchet MS';
+  margin: 5% 15%;
+}
+
+.login-text {
+  font-weight: bold;
+  margin-left: 44%;
+  margin-bottom: 10px;
+  width: 100px;
+}
+
+.title {
+  width: 100%;
+  margin-left: 25%;
+}
+
+.example-error {
+  box-sizing: border-box;
+  position: absolute;
+  top: 480px;
+  left: 200px;
+  width: 50%;
+  height: 30px;
+  background-color: #dc3a3a;
+  color: white;
+  transition: top 0.2s;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 5px;
+  z-index: 99;
+}
+
+.example-error.inactive {
+  top: -30px;
+}
+.hint {
+  align-self: center;
+  font-size: smaller !important;
+}
+
+.login-form-button {
+  width: 100%;
+}
+
+.login-form {
+  margin-left: 17%;
+}
+
+.product {
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+  border-radius: 50%;
+  border: solid 3px black;
+  width: 250px;
+  height: 250px;
+  font-size: xx-large;
+  font-weight: bold;
+}
+
+.qNew {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.signup {
+  background-color: #c21d00;
+  color: white;
+  width: 20%;
+  align-self: center;
+}
+
+.logo {
+  margin-top: 30px;
+  margin-left: 33%;
+}

@@ -1,0 +1,50 @@
+<div class="main-container">
+  <header class="header" style="background-color: transparent !important">
+    <img src="../../../assets/Ornico Logo_png black.png" width="150px" />
+  </header>
+  <div class="content-container content-layout">
+    <div [hidden]="navHidden">
+      <clr-vertical-nav [clrVerticalNavCollapsible]="true" [clrVerticalNavCollapsed]="navCollapsed">
+        <app-sidenav></app-sidenav>
+      </clr-vertical-nav>
+    </div>
+    <div class="content-area">
+      <div class="client" [hidden]="clientHidden">
+        <angular2-multiselect
+          [placeholder]="'Client'"
+          [data]="listOfClient"
+          (onSelect)="getClient($event)"
+          [(ngModel)]="selectedClient"
+          [settings]="singledropdownSettings"
+          id="drpClient"
+          style="width: 400px"
+        >
+        </angular2-multiselect>
+      </div>
+      <div class="close" [hidden]="closeHidden">
+        <button nz-button nzType="primary" (click)="CloseDashboard()">Close Dashboard</button>
+      </div>
+      <div class="actions">
+        <a nz-dropdown nzTrigger="click" [nzBackdrop]="false" [nzDropdownMenu]="menu">
+          <i nz-icon nzType="down"></i>
+        </a>
+        {{ userDetail }}
+        <nz-dropdown-menu #menu="nzDropdownMenu">
+          <ul nz-menu>
+            <li nz-menu-item nzMatchRouter *ngIf="isAdmin">
+              <a [routerLink]="['/', 'portal', 'users']">User Management</a>
+            </li>
+            <li nz-menu-item nzMatchRouter *ngIf="isAdmin">
+              <a [routerLink]="['/', 'portal', 'client']">Client Management</a>
+            </li>
+            <li nz-menu-item><a (click)="Logout()">Logout</a></li>
+          </ul>
+        </nz-dropdown-menu>
+      </div>
+      <div class="topHeading" [hidden]="headerHidden">
+        <app-header></app-header>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

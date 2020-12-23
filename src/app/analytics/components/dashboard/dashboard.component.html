@@ -1,0 +1,19 @@
+<div class="portaldashboard">
+  <div class="topLeft">
+    <app-volume heading="VOLUME OF MEDIA ITEMS"></app-volume>
+  </div>
+  <div class="topRight">
+    <app-mediatype heading="TOP MEDIUMS"></app-mediatype>
+  </div>
+  <div class="ave">
+    <br /><br />{{ dateFrom }} to {{ dateTo }} <br /><br />
+    Total AVE / Media Spend<br />
+    ZAR {{ aveText }}
+  </div>
+  <div class="bottomLeft">
+    <app-sentiment heading="SENTIMENT"></app-sentiment>
+  </div>
+  <div class="bottomRight">
+    <app-source heading="TOP SOURCES" graphtype="pie" [sliderhidden]="true"></app-source>
+  </div>
+</div>

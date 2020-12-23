@@ -1,0 +1,226 @@
+[
+  {
+    "navItem": "Volume",
+    "types": [
+      {
+        "type": "stack",
+        "menu": "CountPerDay"
+      },
+      {
+        "type": "stack",
+        "menu": "CountPerWeek"
+      },
+      {
+        "type": "stack",
+        "menu": "CountPerMonth"
+      }
+    ]
+  },
+  {
+    "navItem": "MediaType",
+    "types": [
+      {
+        "type": "bar",
+        "menu": "ItemCount"
+      },
+      {
+        "type": "pie",
+        "menu": "ItemShare"
+      }
+    ]
+  },
+  {
+    "navItem": "Source",
+    "types": [
+      {
+        "type": "bar",
+        "menu": "ItemCount"
+      },
+      {
+        "type": "pie",
+        "menu": "ItemShare"
+      }
+    ]
+  },
+  {
+    "navItem": "Region",
+    "types": [
+      {
+        "type": "geo",
+        "menu": "LocationMap"
+      },
+      {
+        "type": "bar",
+        "menu": "ItemCount"
+      },
+      {
+        "type": "pie",
+        "menu": "ItemShare"
+      }
+    ]
+  },
+  {
+    "navItem": "Category",
+    "types": [
+      {
+        "type": "bar",
+        "menu": "ItemCount"
+      },
+      {
+        "type": "pie",
+        "menu": "ItemShare"
+      }
+    ]
+  },
+  {
+    "navItem": "Language",
+    "types": [
+      {
+        "type": "bar",
+        "menu": "ItemCount"
+      },
+      {
+        "type": "pie",
+        "menu": "ItemShare"
+      }
+    ]
+  },
+  {
+    "navItem": "LSMSEM",
+    "types": [
+      {
+        "type": "bar",
+        "menu": "ItemCount"
+      },
+      {
+        "type": "pie",
+        "menu": "ItemShare"
+      }
+    ]
+  },
+  {
+    "navItem": "RateCard",
+    "types": [
+      {
+        "type": "bar",
+        "menu": "CountPerDay"
+      },
+      {
+        "type": "bar",
+        "menu": "CountPerWeek"
+      },
+      {
+        "type": "bar",
+        "menu": "CountPerMonth"
+      }
+    ]
+  },
+  {
+    "navItem": "Brand",
+    "types": [
+      {
+        "type": "bar",
+        "menu": "ItemCount"
+      },
+      {
+        "type": "pie",
+        "menu": "ItemShare"
+      }
+    ]
+  },
+  {
+    "navItem": "AdvertType",
+    "types": [
+      {
+        "type": "bar",
+        "menu": "ItemCount"
+      },
+      {
+        "type": "pie",
+        "menu": "ItemShare"
+      }
+    ]
+  },
+  {
+    "navItem": "Data",
+    "types": [
+      {
+        "type": "stack",
+        "menu": ""
+      },
+      {
+        "type": "pie",
+        "menu": ""
+      }
+    ]
+  },
+  {
+    "navItem": "Sentiment",
+    "types": [
+      {
+        "type": "stack",
+        "menu": "CountPerDay"
+      },
+      {
+        "type": "stack",
+        "menu": "CountPerWeek"
+      },
+      {
+        "type": "stack",
+        "menu": "CountPerMonth"
+      }
+    ]
+  },
+  {
+    "navItem": "Spokespersons",
+    "types": [
+      {
+        "type": "stack",
+        "menu": "ItemCount"
+      },
+      {
+        "type": "pie",
+        "menu": "ItemShare"
+      }
+    ]
+  },
+  {
+    "navItem": "Reputational",
+    "types": [
+      {
+        "type": "stack",
+        "menu": "ItemCount"
+      },
+      {
+        "type": "pie",
+        "menu": "ItemShare"
+      }
+    ]
+  },
+  {
+    "navItem": "Authors",
+    "types": [
+      {
+        "type": "stack",
+        "menu": "ItemCount"
+      },
+      {
+        "type": "pie",
+        "menu": "ItemShare"
+      }
+    ]
+  },
+  {
+    "navItem": "Words",
+    "types": [
+      {
+        "type": "stack",
+        "menu": ""
+      },
+      {
+        "type": "pie",
+        "menu": ""
+      }
+    ]
+  }
+]

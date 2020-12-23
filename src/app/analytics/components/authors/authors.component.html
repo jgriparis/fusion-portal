@@ -1,0 +1,37 @@
+<div class="pageStyle" *ngIf="isMedium; else notShow">
+  <div class="slider">
+    <nz-row>
+      <div nz-col nzSpan="12">
+        <b> Authors to show:</b>
+        <nz-input-number
+          [nzMin]="1"
+          [nzMax]="recordCount"
+          [ngStyle]="{ marginLeft: '16px' }"
+          [(ngModel)]="initialValue"
+          (ngModelChange)="onChangeSlider($event)"
+        ></nz-input-number>
+        <b> (Maximum: {{ recordCount }})</b>
+      </div>
+    </nz-row>
+  </div>
+  <div echarts [options]="chartOption" class="graphStyle" (chartClick)="onChartClick($event)"></div>
+  <div>
+    <nz-modal
+      [nzStyle]="{ top: '15px', width: '90%' }"
+      [(nzVisible)]="isVisibleTop"
+      (nzOnCancel)="handleCancelTop()"
+      (nzOnOk)="handleOkTop()"
+    >
+      <app-datachart itemField="sentiment" itemCategory="author"></app-datachart>
+    </nz-modal>
+  </div>
+</div>
+<ngx-spinner [fullScreen]="false" type="ball-clip-rotate-multiple" size="medium">
+  <p class="loading">Loading ...</p>
+</ngx-spinner>
+<ng-template #notShow>
+  <p style="position: absolute; font-weight: bold; left: 20%">
+    You do not have access to this module. <br />
+    Please contact Ornico Customer Support if you require access.
+  </p>
+</ng-template>

@@ -1,0 +1,20 @@
+<div>
+  <highcharts-chart
+    id="container"
+    [Highcharts]="Highcharts"
+    [constructorType]="chartConstructor"
+    [options]="chartOptions"
+    style="display: block; height: 600px"
+  >
+  </highcharts-chart>
+</div>
+<div>
+  <nz-modal
+    [nzStyle]="{ top: '15px', width: '90%' }"
+    [(nzVisible)]="isVisibleTop"
+    (nzOnCancel)="handleCancelTop()"
+    (nzOnOk)="handleOkTop()"
+  >
+    <app-datachart itemField="region" itemCategory="none"></app-datachart>
+  </nz-modal>
+</div>

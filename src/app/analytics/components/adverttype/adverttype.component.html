@@ -1,0 +1,14 @@
+<div echarts [options]="chartOption" class="graphStyle" (chartClick)="onChartClick($event)"></div>
+<div>
+  <nz-modal
+    [nzStyle]="{ top: '15px', width: '90%' }"
+    [(nzVisible)]="isVisibleTop"
+    (nzOnCancel)="handleCancelTop()"
+    (nzOnOk)="handleOkTop()"
+  >
+    <app-datachart itemField="advertisingtype" itemCategory="none"></app-datachart>
+  </nz-modal>
+</div>
+<ngx-spinner [fullScreen]="false" type="ball-clip-rotate-multiple" size="medium">
+  <p class="loading">Loading ...</p>
+</ngx-spinner>

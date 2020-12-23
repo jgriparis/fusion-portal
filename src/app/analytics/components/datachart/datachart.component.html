@@ -1,0 +1,31 @@
+<div class="tableStyle">
+  <div>
+    <span class="button-group">
+      <button (click)="removeFromAnalytics()" [hidden]="isPopup">Remove Selection from Analytics</button>
+      <button (click)="restoreAnalytics()" [hidden]="isPopup">Restore Dataset</button>
+      <button (click)="addToCircle()" [hidden]="!canCircle">Add Selection to The Circle</button>
+      <button (click)="exportExcel()" [hidden]="!canExport">Export to Excel</button>
+    </span>
+  </div>
+
+  <div class="datatable">
+    <div class="example-error inactive">
+      <span class="message"></span>
+    </div>
+    <ag-grid-angular
+      #agGrid
+      style="width: 100%; height: 800px"
+      class="ag-theme-alpine"
+      [modules]="modules"
+      [rowData]="DataRows"
+      [columnDefs]="cols"
+      [defaultColDef]="defaultColDef"
+      [sideBar]="sideBar"
+      rowSelection="multiple"
+      pagination="true"
+      (gridReady)="onGridReady($event)"
+      (cellClicked)="onCellClicked($event)"
+    >
+    </ag-grid-angular>
+  </div>
+</div>

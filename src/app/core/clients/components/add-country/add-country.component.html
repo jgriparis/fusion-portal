@@ -1,0 +1,123 @@
+<div *ngIf="loadContent">
+  <form nz-form [nzLayout]="'vertical'" [formGroup]="countryForm" (ngSubmit)="submitForm()">
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="24">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="14">TYPE</nz-form-label>
+          <nz-form-control [nzSpan]="24">
+            <angular2-multiselect
+              [data]="listOfType"
+              [settings]="dropdownSettings"
+              [formControl]="f.type"
+              (onSelect)="onTypeSelect($event)"
+            >
+            </angular2-multiselect>
+            <div *ngIf="f?.type?.errors?.required" class="text-danger">A Type is required.</div>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="24">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="14">COUNTRY</nz-form-label>
+          <nz-form-control [nzSpan]="24">
+            <angular2-multiselect [data]="listOfCountry" [settings]="dropdownSettings" [formControl]="f.country">
+            </angular2-multiselect>
+            <div *ngIf="f?.country?.errors?.required" class="text-danger">A Country is required.</div>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="24">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="14">SUBSCRIPTION</nz-form-label>
+          <nz-form-control [nzSpan]="24">
+            <angular2-multiselect
+              [data]="listOfSubscription"
+              [settings]="dropdownSettings"
+              [formControl]="f.subscription"
+            >
+            </angular2-multiselect>
+            <div *ngIf="f?.subscription?.errors?.required" class="text-danger">A Subscription is required.</div>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="24">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="14">MEDIA TYPE</nz-form-label>
+          <nz-form-control [nzSpan]="24">
+            <angular2-multiselect
+              [data]="listOfMediaType"
+              [settings]="multidropdownSettings"
+              [formControl]="f.mediatype"
+            >
+            </angular2-multiselect>
+            <div *ngIf="f?.mediatype?.errors?.required" class="text-danger">At least one Media Type is required.</div>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="24">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="14">BRAND</nz-form-label>
+          <nz-form-control [nzSpan]="24">
+            <angular2-multiselect [data]="listOfBrand" [settings]="multidropdownSettings" [formControl]="f.brand">
+            </angular2-multiselect>
+            <div *ngIf="f?.brand?.errors?.required" class="text-danger">At least one Brand is required.</div>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="24">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="14">CATEGORIES</nz-form-label>
+          <nz-form-control [nzSpan]="24">
+            <angular2-multiselect [data]="listOfCategory" [settings]="multidropdownSettings" [formControl]="f.category">
+            </angular2-multiselect>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="24">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="14">SUB CATEGORIES</nz-form-label>
+          <nz-form-control [nzSpan]="24">
+            <angular2-multiselect
+              [data]="listOfSubCategory"
+              [settings]="multidropdownSettings"
+              [formControl]="f.subcategory"
+            >
+            </angular2-multiselect>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="24">
+        <nz-form-item>
+          <nz-form-label [nzSpan]="14">TOPICS</nz-form-label>
+          <nz-form-control [nzSpan]="24">
+            <angular2-multiselect [data]="listOfTopic" [settings]="multidropdownSettings" [formControl]="f.topic">
+            </angular2-multiselect>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="3">
+        <nz-form-item>
+          <nz-form-control [nzSpan]="24">
+            <button nz-button nzType="primary">Submit</button>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+  </form>
+</div>

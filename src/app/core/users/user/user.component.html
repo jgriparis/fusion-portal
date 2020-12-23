@@ -1,0 +1,96 @@
+<div class="container">
+  <br />
+  <form nz-form [nzLayout]="'vertical'" [formGroup]="userForm" (ngSubmit)="submitForm()">
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="8">
+        <nz-form-item>
+          <nz-form-control [nzSpan]="24">
+            <input nz-input formControlName="username" id="username" placeholder="User Name" />
+          </nz-form-control>
+          <div *ngIf="f.username.errors?.required" [ngClass]="'error'">Username required.</div>
+          <div *ngIf="f.username.errors?.email" [ngClass]="'error'">Must be a valid email address</div>
+        </nz-form-item>
+      </div>
+      <div nz-col class="gutter-row" [nzSpan]="8">
+        <nz-form-item>
+          <nz-form-control [nzSpan]="24">
+            <label nz-checkbox formControlName="internal">Ornico Internal</label>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="8">
+        <nz-form-item>
+          <nz-form-control [nzSpan]="24">
+            <div *ngIf="!isExist">
+              <input nz-input type="password" id="password" formControlName="password" />
+            </div>
+          </nz-form-control>
+          <div *ngIf="f.password.errors?.required" [ngClass]="'error'">Password is required</div>
+          <div *ngIf="f.password.errors?.minlength" [ngClass]="'error'">Password must be at least 6 characters</div>
+        </nz-form-item>
+      </div>
+      <div nz-col class="gutter-row" [nzSpan]="8">
+        <nz-form-item>
+          <nz-form-control [nzSpan]="24">
+            <label nz-checkbox formControlName="admin">Admin User</label>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="8">
+        <nz-form-item>
+          <nz-form-control [nzSpan]="24">
+            <input nz-input formControlName="firstname" id="firstname" placeholder="First Name" />
+          </nz-form-control>
+          <div *ngIf="f.firstname.errors?.required" [ngClass]="'error'">First Name required.</div>
+        </nz-form-item>
+      </div>
+      <div nz-col class="gutter-row" [nzSpan]="8">
+        <nz-form-item>
+          <nz-form-control [nzSpan]="24">
+            <label nz-checkbox formControlName="disabled">Disabled</label>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="8">
+        <nz-form-item>
+          <nz-form-control [nzSpan]="24">
+            <input nz-input formControlName="lastname" id="lastname" placeholder="Surname" />
+          </nz-form-control>
+          <div *ngIf="f.lastname.errors?.required" [ngClass]="'error'">Last Name required.</div>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="16" *ngIf="isExist">
+        <nz-form-item>
+          <nz-form-control [nzSpan]="24">
+            <angular2-multiselect
+              [placeholder]="'Linked Clients'"
+              [data]="listOfClients"
+              [settings]="dropdownSettings"
+              formControlName="drpClients"
+              id="drpClients"
+              [(ngModel)]="selectedClients"
+            >
+            </angular2-multiselect>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+    <div nz-row [nzGutter]="24">
+      <div nz-col class="gutter-row" [nzSpan]="24">
+        <nz-form-item>
+          <nz-form-control>
+            <button nz-button nzType="primary">Submit</button>
+          </nz-form-control>
+        </nz-form-item>
+      </div>
+    </div>
+  </form>
+</div>

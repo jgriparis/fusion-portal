@@ -1,0 +1,40 @@
+.main-container {
+  background-image: url(../../../../../assets/portal_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.topHeading {
+  width: 80%;
+  left: 10%;
+  top: -2%;
+  position: relative;
+}
+
+.actions {
+  position: absolute;
+  z-index: 99;
+  top: 2%;
+  left: 80%;
+  width: 300px;
+}
+
+.close {
+  position: absolute;
+  z-index: 98;
+  top: -1%;
+  left: 45%;
+}
+
+.client {
+  position: absolute;
+  z-index: 98;
+  top: 2%;
+  left: 15%;
+  width: 300px;
+}
+
+.clr-vertical-nav {
+  display: block !important;
+}
