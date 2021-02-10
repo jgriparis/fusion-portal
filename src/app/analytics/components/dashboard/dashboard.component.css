@@ -3,39 +3,35 @@
 }
 
 .topLeft {
-  position: absolute;
-  top: 2%;
-  margin-top: 3%;
-  width: 40%;
-  left: 100px;
-  height: 50%;
+  position: relative;
+  margin: 0 2% 1% 0;
+  width: 48%;
+  height: 45%;
+  float: left;
 }
 
 .topRight {
-  position: absolute;
-  margin-top: 3%;
-  top: 2%;
-  width: 40%;
-  left: 52%;
-  height: 50%;
+  position: relative;
+  margin: 0 1% 1% 0;
+  width: 48%;
+  height: 45%;
+  float: left;
 }
 
 .bottomLeft {
-  position: absolute;
-  margin-top: 3%;
-  top: 45%;
-  width: 40%;
-  left: 100px;
-  height: 50%;
+  position: relative;
+  margin: 0 2% 1% 0;
+  width: 48%;
+  height: 45%;
+  float: left;
 }
 
 .bottomRight {
-  position: absolute;
-  margin-top: 3%;
-  top: 45%;
-  width: 40%;
-  left: 52%;
-  height: 50%;
+  position: relative;
+  margin: 0 2% 1% 0;
+  width: 48%;
+  height: 45%;
+  float: left;
 }
 
 .dashButton {
@@ -45,16 +41,15 @@
 
 .ave {
   position: absolute;
-  width: 16%;
-  height: 32%;
-  font-size: 90%;
+  width: 14%;
+  height: 17%;
+  font-size: 100%;
   text-align: center;
   color: #fff;
   text-align: center;
-  background: #000;
-  left: 40%;
-  top: 32%;
+  background: rgb(65 65 65 / 80%);
+  left: 42%;
+  top: 40%;
   z-index: 9;
-  border-radius: 50%;
-  padding: 1%;
+  border-radius: 67%;
 }

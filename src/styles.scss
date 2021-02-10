@@ -23,3 +23,67 @@ body {
 .multiselect-dropdown {
   background-color: lightgrey;
 }
+
+.selected-list .c-angle-down,
+.selected-list .c-angle-up {
+  top: 51% !important;
+  width: 22px !important;
+  height: 22px !important;
+  right: 10px !important;
+  border-left: 1px solid #b9b9b9;
+  padding-left: 7px;
+}
+
+.clear-all {
+  right: 40px !important;
+  width: 10px !important;
+}
+
+.ant-btn {
+  height: 37px !important;
+  padding: 4px 10px !important;
+}
+
+.ant-row .ant-btn {
+  height: 32px !important;
+}
+
+.ant-form {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-area {
+  width: 330px !important;
+}
+
+button:focus,
+button:active {
+  outline: 0 auto !important;
+}
+
+.ant-btn-icon-only {
+  width: 42px !important;
+}
+
+.ant-input {
+  background-color: #fff !important;
+}
+
+.clr-vertical-nav .nav-trigger-icon {
+  margin: 0 0 0 0.9rem !important;
+}
+
+.button-group button {
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  border-radius: 2px;
+  transition: border 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  margin: 0 10px 10px 0;
+}
+
+.button-group button:hover {
+  border: 1px solid #40a9ff;
+}

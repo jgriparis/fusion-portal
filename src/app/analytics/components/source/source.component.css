@@ -7,13 +7,11 @@
 .graphStyle {
   height: 75%;
   background-color: white;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .slider {
-  position: relative;
-  margin-top: 5px;
-  left: 30%;
+  margin: 5px 0;
 }
 
 .loading {
